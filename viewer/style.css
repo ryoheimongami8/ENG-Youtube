@@ -1,0 +1,29 @@
+:root { --bg:#0f172a; --panel:#1e293b; --fg:#e2e8f0; --dim:#94a3b8; --accent:#60a5fa; --hl:#334155; --warn:#fbbf24; color-scheme: dark; }
+* { box-sizing: border-box; }
+html, body { margin:0; background:var(--bg); color:var(--fg); font-family:system-ui,-apple-system,"Segoe UI",sans-serif; }
+header { position:sticky; top:0; z-index:5; display:flex; align-items:center; gap:8px; padding:10px 16px; padding-top:calc(10px + env(safe-area-inset-top)); background:var(--bg); border-bottom:1px solid var(--panel); }
+header h1 { margin:0; font-size:16px; font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+button, select { font:inherit; color:var(--fg); background:var(--panel); border:1px solid #334155; border-radius:10px; padding:8px 12px; min-height:44px; }
+button:active { background:var(--hl); }
+main { padding:16px; max-width:720px; margin:0 auto; }
+#player { padding-bottom:170px; }
+.import { display:block; text-align:center; padding:16px; border:2px dashed var(--accent); border-radius:12px; color:var(--accent); font-weight:600; cursor:pointer; }
+#msg { min-height:1.2em; color:var(--warn); font-size:14px; }
+.hint { color:var(--dim); font-size:13px; }
+ul { list-style:none; padding:0; margin:12px 0; }
+li.lesson { display:flex; gap:8px; align-items:center; background:var(--panel); border-radius:12px; margin-bottom:10px; }
+li.lesson .open { flex:1; text-align:left; background:none; border:0; padding:14px; }
+li.lesson .t { font-weight:600; }
+li.lesson .m { color:var(--dim); font-size:13px; margin-top:4px; }
+li.lesson .del { background:none; border:0; color:var(--dim); }
+.s { padding:12px; border-radius:10px; margin-bottom:6px; cursor:pointer; border-left:3px solid transparent; }
+.s.active { background:var(--hl); border-left-color:var(--accent); }
+.s .en { font-size:18px; line-height:1.5; }
+.s .ja { font-size:14px; color:var(--dim); margin-top:4px; line-height:1.5; }
+.s.flag .en::after { content:" ⚠"; color:var(--warn); font-size:13px; }
+.w.cur { color:var(--accent); font-weight:700; }
+body.no-ja .ja { display:none; }
+footer#controls { position:fixed; left:0; right:0; bottom:0; background:var(--panel); padding:10px 16px calc(10px + env(safe-area-inset-bottom)); border-top:1px solid #334155; }
+footer .row { display:flex; gap:10px; align-items:center; justify-content:center; margin:4px 0; flex-wrap:wrap; }
+footer label { display:flex; align-items:center; gap:6px; font-size:14px; }
+#play { min-width:64px; font-size:20px; }

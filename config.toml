@@ -1,0 +1,39 @@
+[paths]
+work_dir = "work"
+out_dir = "out"
+models_dir = "models"
+
+[download]
+js_runtime = "node"          # yt-dlp JS runtime (node already installed)
+mp3_bitrate = "64k"
+
+[chunking]
+target_sec = 30.0            # aim for chunks near this length
+max_sec = 60.0               # hard cap
+min_sec = 8.0
+silence_db = -35
+silence_min_sec = 0.3
+
+[asr]
+model = "Qwen/Qwen3-ASR-1.7B"
+language = "English"
+batch_size = 8
+max_new_tokens = 512
+
+[llm]
+repo = "bartowski/Qwen3.8-27B-GGUF"
+file = "Qwen3.8-27B-Q5_K_M.gguf"
+server_exe = "D:/30_Comfyui-Video/ComfyUI/custom_nodes/ComfyUI-LLM-text-processor/vendor/llama.cpp/b10472/win-x64-cuda13/llama-server.exe"
+port = 8765
+ctx = 8192
+retries = 3
+prompt_version = "1"
+
+[align]
+model = "Qwen/Qwen3-ForcedAligner-0.6B"
+language = "English"
+
+[review]
+max_word_sec = 3.0
+max_edit_ratio = 0.3
+mp3_tolerance_sec = 0.3
