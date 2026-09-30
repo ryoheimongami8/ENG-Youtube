@@ -1,5 +1,5 @@
 // Cache-first app shell. All paths are relative so it works under /ENG-Youtube/ on GitHub Pages.
-const CACHE = "engyt-shell-v1";
+const CACHE = "engyt-shell-v2";
 const SHELL = ["./", "index.html", "style.css", "app.js", "fflate.js", "manifest.webmanifest", "icons/icon-192.png", "icons/icon-512.png"];
 
 self.addEventListener("install", (e) => {
